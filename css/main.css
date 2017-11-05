@@ -2,7 +2,11 @@
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  /*Normalizando el documento (Reset)*/
   box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 *:before, *:after {
@@ -15,59 +19,233 @@ body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.71429;
+  /*Especificando tipografía para todo el documento*/
+  font-family: 'Raleway', sans-serif;
 }
 
 img {
   vertical-align: middle;
 }
 
-.container {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 14px;
-  padding-right: 14px;
-}
-
-.container:before, .container:after {
-  content: " ";
-  display: table;
-}
-
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.container:after {
-  clear: both;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
-.m-0 {
-  margin: 0px;
+ul, ol {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 a {
-  color: #373B47;
   text-decoration: none;
 }
 
-a:hover {
-  color: #E95853;
+div {
+  outline: 1px solid red;
 }
 
-.text-uppercase {
+.container {
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.block {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.block-content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.block-title {
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-/*ESCRIBE TU CÓDIGO DESDE AQUÍ*/
+.block-text {
+  font-weight: bold;
+}
 
+/*Menú Fijo*/
+.navbar {
+  width: 100%;
+  min-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*logo*/
+.navbar-logo {
+  float: right;
+  height: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-image {
+  height: 100%;
+}
+
+.navbar-list {
+  float: left;
+}
+
+.navbar-item {
+  display: inline-block;
+}
+
+.navbar-link {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #3B3F4B;
+  transition: color .3s ease-out
+}
+
+.navbar-link:hover {
+  color: crimson;
+}
+
+/*Home*/
+.home {
+  min-height: 530px;
+  margin-top: 100px;
+  background-image: url(../assets/images/bg-home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.home-preheading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.home-heading {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  transition: font-size .6s linear;
+}
+
+.home-subheading {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 80px;
+}
+
+/*Botón*/
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.btn-first {
+  background-color: #2ECC71;
+  color: white;
+  transition: background-color .3s ease-out;
+}
+
+.btn-first:hover {
+  background-color: #1b914d;
+  color: white;
+}
+
+.services {
+  background-color: #F17C72;
+  color: white;
+}
+
+.services .block-content {
+  margin-bottom: 80px;
+}
+
+.service-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.service-box {
+  float: left;
+  min-width: 250px;
+  width: 33.333%;
+  min-height: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: .035em;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.service-title {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.service-description {
+  /**/
+}
+
+.service-item {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.work {
+  background-color: white;
+  color: #191919;
+}
+
+/*Pie de página*/
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #373B47;
+  color: #FFF;
+  text-align: center;
+}
+
+footer p {
+  padding: 20px;
+}
